@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Karaoke Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: black; color: white;">
+
+  
+ 
+  <section class="music">
+    <div class="search">
+    <form action="/submit" name="myform" method="post">
+      <div class="former">
+      <input type="text" name="title" class="search-input">
+      <br>
+     <div class="submitdiv">
+       <!-- <input type="submit" value="" class="search-button"> -->
+        <button type="submit" style="border-radius: 50px; padding: 5px;"><img src="/images/search.png" alt="" height="15px"></button>
+    </div>
+     <br>
+    </form>
+  </div>
+  </div>
+  <!-- <iframe src="https://open.spotify.com/embed/track/spotify_track_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+  <% if (locals.can_play_song) { %>
+    <% if (can_play_song == 1) { %>
+      <div class="spotify-play-button">
+        <iframe src="https://open.spotify.com/embed/track/<%= spotify_track_id %>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    <% } else{ %>
+      <div class="spotify-play-button">
+        <p>Sorry, this song is not available on Spotify.</p>
+        <div class="thumbnail">  <img src="<%= pic %>" alt="" id="thumb"></div>
+      </div>
+    <% }%>
+  <% } else {%>
+    <div class="spotify-play-button">
+      <p>Search for a song!</p>
+    </div>
+  <% } %>
+   
+
+
+  <br>
+  <br>
+
+  <img src="" alt="">
+  </section>
+  <br>
+  <br>
+  <section >
+    <!-- <div class="thumbnail">  <img src="" alt="" id="thumb"></div> -->
+   <div class="lyric"> <p><%- lyric %></p> </div>
+  </section>
+  
+
+  
+</section>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+
+
+body {
+  height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  /* color: white; */
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight:900;
+  font-style: normal;
+  margin: 0;
+  margin-top: 100px;
+}
+
+p {
+  white-space: pre-wrap; /* CSS for preserving whitespaces and line breaks */
+  /* font-family: 'Gloria Hallelujah', 'Titan One', sans-serif; Optional: Adjust the font family to match your design */
+}
+
+#thumb{
+  height: 300px;
+}
+
+.music{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+
+}
+.submitdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail,.lyric{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  
+}
+
+.search-input{
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(86, 86, 86, 0.446);
+  color: #fff;   
+  padding: 30px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  text-align: center;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: #4cae4c;
+}
+
+.former
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 57px;
+}
