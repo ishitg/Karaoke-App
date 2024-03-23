@@ -19,7 +19,7 @@ import jsdom from "jsdom";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3001;
 
 const yourBearerToken = "QJmAGsBGBN6HU5Pbt6Np7WcEcRxhXMXTAkBDbIeV20tOn5uyUgo0jkW1Jmn8EOqs";
 
