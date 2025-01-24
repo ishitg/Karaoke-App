@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Scrape lyrics from a Genius.com song URL
 async function scrapeSongLyrics(url) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {mode: "no-cors"});
     const html = await response.text();
     const dom = new jsdom.JSDOM(html, { contentType: "text/html" });
     const lyricsDivs = dom.window.document.querySelectorAll(
