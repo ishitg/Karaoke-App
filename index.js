@@ -33,7 +33,7 @@ async function scrapeSongLyrics(url) {
     const response = await fetch(url, {mode: "no-cors"});
     const html = await response.text();
 
-    console.log(html);
+    // console.log(html);
     
     const dom = new jsdom.JSDOM(html, { contentType: "text/html" });
     const lyricsDivs = dom.window.document.querySelectorAll(".Lyrics-sc-3051f9b7-1");
