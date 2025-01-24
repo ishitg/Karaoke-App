@@ -179,6 +179,8 @@ app.post("/submit", async (req, res) => {
         console.log(spotifyTrackId);
       }
 
+      console.log(lyrics);
+
       res.render("index.ejs", {
         lyric: lyrics,
         pic: pic,
