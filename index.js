@@ -32,10 +32,11 @@ async function scrapeSongLyrics(url) {
   try {
     const response = await fetch(url, {mode: "no-cors"});
     const html = await response.text();
+
+    console.log(html);
+    
     const dom = new jsdom.JSDOM(html, { contentType: "text/html" });
-    const lyricsDivs = dom.window.document.querySelectorAll(
-      ".Lyrics-sc-3051f9b7-1"
-    );
+    const lyricsDivs = dom.window.document.querySelectorAll(".Lyrics-sc-3051f9b7-1");
     let allLyrics = "";
     // console.log(lyricsDivs);
     lyricsDivs.forEach((div) => {
@@ -48,7 +49,7 @@ async function scrapeSongLyrics(url) {
       lyricsPart = lyricsPart.replace(/<.*?>/g, "");
       allLyrics += lyricsPart + "\n"; // Concatenate each part with a newline
     });
-    // console.log(allLyrics);
+    console.log(allLyrics);
 
     return allLyrics;
   } catch (error) {
@@ -100,7 +101,7 @@ app.post("/submit", async (req, res) => {
         }
       );
       console.log("hey");
-
+      console.log(lyrics);
       const hitter = songresp.data.response.song;
       let spotifyTrackId = "";
       let canPlaySong = 0;
